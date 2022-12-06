@@ -11,31 +11,36 @@ class _GridBState extends State<GridB> {
   final List<Map<String, dynamic>> gridMap = [
     {
       "title": "Sunflower",
-      "price": "Sunlight : high",
+      "sun": "Direct Sun",
+      "water": "Once per week",
       "image":
           "https://images.unsplash.com/photo-1634600587068-4b8c840c3d8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     },
     {
       "title": "Daisy",
-      "price": "\$243",
+      "sun": "Direct Sun",
+      "water": "Once per week",
       "image":
           "https://images.unsplash.com/photo-1561997896-49c20aba9404?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGFpc3klMjBmbG93ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
     },
     {
       "title": "Tulip",
-      "price": "\$243",
+      "sun": "Full Sun",
+      "water": "Once per week",
       "image":
           "https://images.unsplash.com/photo-1468327768560-75b778cbb551?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dHVsaXB8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
     },
     {
-      "title": "dandelion",
-      "price": "\$243",
+      "title": "Dandelion",
+      "sun": "Full Sun",
+      "water": "Regularly",
       "image":
           "https://images.unsplash.com/photo-1544954412-78da2cfa1a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGFuZGVsaW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
-      "title": "rose",
-      "price": "\$243",
+      "title": "Rose",
+      "sun": "Direct Sun",
+      "water": "Twice per week",
       "image":
           "https://images.unsplash.com/photo-1496062031456-07b8f162a322?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cm9zZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
     },
@@ -51,13 +56,13 @@ class _GridBState extends State<GridB> {
               crossAxisCount: 2,
               crossAxisSpacing: 12.0,
               mainAxisSpacing: 12,
-              mainAxisExtent: 340),
+              mainAxisExtent: 270),
           itemCount: gridMap.length,
           itemBuilder: (_, index) {
             return Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.greenAccent.shade200,
+                borderRadius: BorderRadius.circular(18),
+                color: Colors.teal.shade100,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,32 +90,28 @@ class _GridBState extends State<GridB> {
                         ),
                         Row(
                           children: [
-                            Icon(Icons.safety_divider),
-                            Text("${gridMap.elementAt(index)['price']}",
+                            Icon(Icons.wb_sunny),
+                            Text("${gridMap.elementAt(index)['sun']}",
                                 style: Theme.of(context)
                                     .textTheme
                                     .subtitle2!
                                     .merge(const TextStyle(
                                         fontWeight: FontWeight.w700,
-                                        color: Colors.yellow))),
+                                        color: Colors.yellowAccent))),
                           ],
                         ),
                         Row(
                           children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.water_sharp),
-                            ),
-                            Text("High"),
+                            Icon(Icons.water),
+                            Text("${gridMap.elementAt(index)['water']}",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .subtitle2!
+                                    .merge(const TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.lightBlue))),
                           ],
-                        ),
-                        Row(
-                          children: [
-                            IconButton(
-                                onPressed: () {}, icon: Icon(Icons.wb_sunny)),
-                            Text("Low"),
-                          ],
-                        ),
+                        )
                       ],
                     ),
                   )

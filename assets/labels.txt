@@ -1,5 +1,5 @@
-daisy
-dandelion
-rose
-sunflower
-tulip
+Daisy
+Dandelion
+Rose
+Sunflower
+Tulip

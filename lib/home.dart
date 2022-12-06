@@ -143,10 +143,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               category != null
-                  ? 'Confidence: ${category!.score.toStringAsFixed(3)}'
+                  ? 'Confidence: {category!.score.toStringAsFixed(3)}'
                   : '',
               style: TextStyle(fontSize: 16),
             ),
+            Text('hello'),
             SizedBox(
               height: 10,
             ),

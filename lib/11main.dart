@@ -131,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
             ),
             SizedBox(
-              height: 36,
+              height: 16,
             ),
             Text(
               category != null ? category!.label : '',
@@ -145,6 +145,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   ? 'Confidence: ${category!.score.toStringAsFixed(3)}'
                   : '',
               style: TextStyle(fontSize: 16),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Center(
+              child: Column(
+                children: [
+                  if (category != null && category!.score < 0.50) ...{
+                    Text(
+                      '                              Warning!!! \n Please feed the clean image & try again .',
+                      style: TextStyle(
+                          color: Colors.redAccent, fontWeight: FontWeight.bold),
+                    )
+                  }
+                ],
+              ),
             ),
             SizedBox(
               height: 10,

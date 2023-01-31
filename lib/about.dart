@@ -14,6 +14,7 @@ class _aboutPageState extends State<aboutPage> {
       appBar: AppBar(
         title: Text("About Page"),
       ),
+      body: Text("This applicatio is develop by SIjal"),
     );
   }
 }

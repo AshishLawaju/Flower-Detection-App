@@ -157,7 +157,79 @@ class _MyHomePageState extends State<MyHomePage> {
                       '                              Warning!!! \n Please feed the clean image & try again .',
                       style: TextStyle(
                           color: Colors.redAccent, fontWeight: FontWeight.bold),
-                    )
+                    ),
+                  }
+                ],
+              ),
+            ),
+            Center(
+              child: Row(
+                children: [
+                  if (category != null && category!.label == "Rose") ...{
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Icon(Icons.surfing),
+                    Text(
+                      '                              Rose \n yo chai description ho .',
+                      style: TextStyle(
+                          color: Colors.green[500],
+                          fontWeight: FontWeight.bold),
+                    ),
+                  }
+                ],
+              ),
+            ),
+            Center(
+              child: Column(
+                children: [
+                  if (category != null && category!.label == "Tulip") ...{
+                    Text(
+                      '                              Tulip \n yo Tulip chai description ho .',
+                      style: TextStyle(
+                          color: Colors.redAccent, fontWeight: FontWeight.bold),
+                    ),
+                  }
+                ],
+              ),
+            ),
+            Center(
+              child: Column(
+                children: [
+                  if (category != null && category!.label == "Daisy") ...{
+                    Text(
+                      '                              Daisy \n dasiy yo chai description ho .',
+                      style: TextStyle(
+                          color: Colors.greenAccent,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  }
+                ],
+              ),
+            ),
+            Center(
+              child: Column(
+                children: [
+                  if (category != null && category!.label == "Dandelion") ...{
+                    Text(
+                      '                              Dandelion \n yo chai Dandelion description ho .',
+                      style: TextStyle(
+                          color: Colors.green[500],
+                          fontWeight: FontWeight.bold),
+                    ),
+                  }
+                ],
+              ),
+            ),
+            Center(
+              child: Column(
+                children: [
+                  if (category != null && category!.label == "Sunflower") ...{
+                    Text(
+                      '                              Rose \n yo chai  Sunflower description ho .',
+                      style: TextStyle(
+                          color: Colors.redAccent, fontWeight: FontWeight.bold),
+                    ),
                   }
                 ],
               ),

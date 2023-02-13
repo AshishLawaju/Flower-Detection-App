@@ -11,10 +11,22 @@ class _aboutPageState extends State<aboutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("About Page"),
-      ),
-      body: Text("This applicatio is develop by SIjal"),
-    );
+        appBar: AppBar(
+          title: Text("About Page"),
+        ),
+        body: Container(
+            child: Column(
+          children: [
+            Row(
+              children: [
+                SizedBox(
+                  width: 20,
+                  height: 50,
+                ),
+                Text("!)a,sndf")
+              ],
+            ),
+          ],
+        )));
   }
 }

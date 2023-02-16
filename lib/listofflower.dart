@@ -62,7 +62,7 @@ class _GridBState extends State<GridB> {
             return Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(18),
-                color: Colors.teal.shade100,
+                color: Colors.lightGreen,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,7 +109,7 @@ class _GridBState extends State<GridB> {
                                     .subtitle2!
                                     .merge(const TextStyle(
                                         fontWeight: FontWeight.w700,
-                                        color: Colors.lightBlue))),
+                                        color: Colors.black))),
                           ],
                         )
                       ],

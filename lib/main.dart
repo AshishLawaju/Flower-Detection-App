@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'flower ko app',
       theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.cyan,
           visualDensity: VisualDensity.adaptivePlatformDensity),
       home: flowerPage(),
     );

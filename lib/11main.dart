@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:imageclassification/classifier.dart';
 import 'package:imageclassification/classifier_quant.dart';
+import 'package:imageclassification/flowerdiscript/rose_detail.dart';
 import 'package:logger/logger.dart';
 import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Image Classif'),
+      home: MyHomePage(title: 'Image Classify'),
     );
   }
 }
@@ -33,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late Classifier _classifier;
-
+PageController _pageController = PageController();
   var logger = Logger();
 
   File? _image;
@@ -82,14 +83,29 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  
+
   //int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
-        title: Text('Flower Idetification ',
+        title: Text('Flower Idetificationsss ',
+        
             style: TextStyle(color: Colors.white)),
+         actions: <Widget>[
+    IconButton(
+      icon: Icon(
+        Icons.account_circle,
+        color: Colors.white,
+      ),
+      onPressed: () {
+        // do something
+      },
+    )
+  ],
       ),
       /* bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -118,6 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            
             Center(
               child: _image == null
                   ? Text('No image selected.')
@@ -167,15 +184,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   if (category != null && category!.label == "Rose") ...{
                     SizedBox(
-                      width: 10,
+                      width: 150,
                     ),
-                    Icon(Icons.surfing),
-                    Text(
-                      '                              Rose \n yo chai description ho .',
-                      style: TextStyle(
-                          color: Colors.green[500],
-                          fontWeight: FontWeight.bold),
-                    ),
+                 //  RaisedButton.icon(onPressed: (){_pageController.an}, icon: Icon(Icons.ac_unit_sharp), label: Text("MORE DETAIL"))
+                 ElevatedButton.icon(onPressed: (){Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const Rose_detail()),
+  );}, icon: Icon(Icons.add_alert), label: Text("detail"))
                   }
                 ],
               ),

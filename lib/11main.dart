@@ -34,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late Classifier _classifier;
-PageController _pageController = PageController();
+  PageController _pageController = PageController();
   var logger = Logger();
 
   File? _image;
@@ -83,29 +83,25 @@ PageController _pageController = PageController();
     });
   }
 
-  
-
   //int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: AppBar(
         title: Text('Flower Idetificationsss ',
-        
             style: TextStyle(color: Colors.white)),
-         actions: <Widget>[
-    IconButton(
-      icon: Icon(
-        Icons.account_circle,
-        color: Colors.white,
-      ),
-      onPressed: () {
-        // do something
-      },
-    )
-  ],
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.account_circle,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              // do something
+            },
+          )
+        ],
       ),
       /* bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -134,7 +130,6 @@ PageController _pageController = PageController();
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            
             Center(
               child: _image == null
                   ? Text('No image selected.')
@@ -186,11 +181,17 @@ PageController _pageController = PageController();
                     SizedBox(
                       width: 150,
                     ),
-                 //  RaisedButton.icon(onPressed: (){_pageController.an}, icon: Icon(Icons.ac_unit_sharp), label: Text("MORE DETAIL"))
-                 ElevatedButton.icon(onPressed: (){Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const Rose_detail()),
-  );}, icon: Icon(Icons.add_alert), label: Text("detail"))
+                    //  RaisedButton.icon(onPressed: (){_pageController.an}, icon: Icon(Icons.ac_unit_sharp), label: Text("MORE DETAIL"))
+                    ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Rose_detail()),
+                          );
+                        },
+                        icon: Icon(Icons.add_alert),
+                        label: Text("detail"))
                   }
                 ],
               ),
@@ -200,7 +201,7 @@ PageController _pageController = PageController();
                 children: [
                   if (category != null && category!.label == "Tulip") ...{
                     Text(
-                      '                              Tulip \n yo Tulip chai description ho .',
+                      '                             ',
                       style: TextStyle(
                           color: Colors.redAccent, fontWeight: FontWeight.bold),
                     ),
@@ -213,7 +214,7 @@ PageController _pageController = PageController();
                 children: [
                   if (category != null && category!.label == "Daisy") ...{
                     Text(
-                      '                              Daisy \n dasiy yo chai description ho .',
+                      '                        ',
                       style: TextStyle(
                           color: Colors.greenAccent,
                           fontWeight: FontWeight.bold),
@@ -227,7 +228,7 @@ PageController _pageController = PageController();
                 children: [
                   if (category != null && category!.label == "Dandelion") ...{
                     Text(
-                      '                              Dandelion \n yo chai Dandelion description ho .',
+                      '                            ',
                       style: TextStyle(
                           color: Colors.green[500],
                           fontWeight: FontWeight.bold),
@@ -241,7 +242,7 @@ PageController _pageController = PageController();
                 children: [
                   if (category != null && category!.label == "Sunflower") ...{
                     Text(
-                      '                              Rose \n yo chai  Sunflower description ho .',
+                      '                              .',
                       style: TextStyle(
                           color: Colors.redAccent, fontWeight: FontWeight.bold),
                     ),

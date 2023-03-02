@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class rose_detail extends StatelessWidget {
-  const rose_detail({Key? key}) : super(key: key);
+class tulip_detail extends StatelessWidget {
+  const tulip_detail({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class rose_detail extends StatelessWidget {
                 height: 45,
               ),
               Text(
-                "Rose",
+                "Tulip",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
               ),
@@ -34,7 +34,7 @@ class rose_detail extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          "https://images.unsplash.com/photo-1571260118569-c77a06a97a8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+                          "https://images.unsplash.com/photo-1524295153903-7d7a56f0581d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8MzE2MzYyNXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
                           height: 370,
                           width: 250,
                           fit: BoxFit.cover,
@@ -64,7 +64,7 @@ class rose_detail extends StatelessWidget {
               ),
               Container(
                 width: 380,
-                height: 80,
+                height: 120,
                 child: Material(
                   elevation: 30,
                   shadowColor: Colors.blueGrey,
@@ -75,7 +75,7 @@ class rose_detail extends StatelessWidget {
                         width: 24,
                       ),
                       Text(
-                          "\nScientific name: Rosa \nHigher classification: Rosoideae\nRank: Genus\n "),
+                          "\nScientific name: Tulipa \nHigher classification: Lilioideae \nFamily: Liliaceae \nKingdom: Plantae \nOrder: Liliales \nTribe: Lilieae \n "),
                       SizedBox(),
                     ],
                   ),
@@ -86,7 +86,7 @@ class rose_detail extends StatelessWidget {
               ),
               Container(
                 width: 380,
-                height: 200,
+                height: 130,
                 child: Material(
                   elevation: 30,
                   shadowColor: Colors.purpleAccent,
@@ -96,7 +96,7 @@ class rose_detail extends StatelessWidget {
                       Container(
                         width: 350,
                         child: Text(
-                          "\nA rose is either a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and tens of thousands of cultivars\nRoses are erect, climbing, or trailing shrubs, the stems of which are usually copiously armed with prickles of various shapes and sizes, commonly called thorns. The leaves are alternate and pinnately compound i.e., feather-formed, usually with oval leaflets that are sharply toothed.",
+                          "\nTulips are a genus of spring-blooming perennial herbaceous bulbiferous geophytes. The flowers are usually large, showy and brightly coloured, generally red, pink, yellow, or white. They often have a different coloured blotch at the base of the tepals, internally.",
                           textAlign: TextAlign.justify,
                         ),
                       ),

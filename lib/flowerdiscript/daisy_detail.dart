@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class rose_detail extends StatelessWidget {
-  const rose_detail({Key? key}) : super(key: key);
+class daisy_detail extends StatelessWidget {
+  const daisy_detail({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class rose_detail extends StatelessWidget {
                 height: 45,
               ),
               Text(
-                "Rose",
+                "Daisy",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
               ),
@@ -34,7 +34,7 @@ class rose_detail extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          "https://images.unsplash.com/photo-1571260118569-c77a06a97a8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+                          "https://images.unsplash.com/photo-1600264195762-c10ff160b264?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGFpc3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
                           height: 370,
                           width: 250,
                           fit: BoxFit.cover,
@@ -64,7 +64,7 @@ class rose_detail extends StatelessWidget {
               ),
               Container(
                 width: 380,
-                height: 80,
+                height: 88,
                 child: Material(
                   elevation: 30,
                   shadowColor: Colors.blueGrey,
@@ -75,7 +75,7 @@ class rose_detail extends StatelessWidget {
                         width: 24,
                       ),
                       Text(
-                          "\nScientific name: Rosa \nHigher classification: Rosoideae\nRank: Genus\n "),
+                          "\nScientific name: Bellis perennis \nFamily: Asteraceae \nKingdom: Plantae \nOrder: Asterales\n\n "),
                       SizedBox(),
                     ],
                   ),
@@ -86,7 +86,7 @@ class rose_detail extends StatelessWidget {
               ),
               Container(
                 width: 380,
-                height: 200,
+                height: 105,
                 child: Material(
                   elevation: 30,
                   shadowColor: Colors.purpleAccent,
@@ -96,7 +96,7 @@ class rose_detail extends StatelessWidget {
                       Container(
                         width: 350,
                         child: Text(
-                          "\nA rose is either a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and tens of thousands of cultivars\nRoses are erect, climbing, or trailing shrubs, the stems of which are usually copiously armed with prickles of various shapes and sizes, commonly called thorns. The leaves are alternate and pinnately compound i.e., feather-formed, usually with oval leaflets that are sharply toothed.",
+                          "\nBellis perennis, the daisy, is a European species of the family Asteraceae, often considered the archetypal species of the name daisy. To distinguish this species from other plants known as daisies, it is sometimes qualified as common daisy, lawn daisy or English daisy.",
                           textAlign: TextAlign.justify,
                         ),
                       ),

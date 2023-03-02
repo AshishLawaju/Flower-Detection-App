@@ -5,8 +5,13 @@ import 'package:image_picker/image_picker.dart';
 import 'package:imageclassification/classifier.dart';
 import 'package:imageclassification/classifier_quant.dart';
 import 'package:imageclassification/flowerdiscript/rose_detail.dart';
+import 'package:imageclassification/flowerdiscript/tulip_detail.dart';
 import 'package:logger/logger.dart';
 import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
+
+import 'flowerdiscript/daisy_detail.dart';
+import 'flowerdiscript/dandelion_detail.dart';
+import 'flowerdiscript/sunflower_detail.dart';
 
 void main() => runApp(MyApp());
 
@@ -89,8 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flower Idetificationsss ',
-            style: TextStyle(color: Colors.white)),
+        title: Text('MERO BAGAICHA ', style: TextStyle(color: Colors.white)),
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -130,6 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            SizedBox(height: 10),
             Center(
               child: _image == null
                   ? Text('No image selected.')
@@ -164,7 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Center(
               child: Column(
                 children: [
-                  if (category != null && category!.score < 0.50) ...{
+                  if (category != null && category!.score < 0.57) ...{
                     Text(
                       '                              Warning!!! \n Please feed the clean image & try again .',
                       style: TextStyle(
@@ -187,7 +192,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Rose_detail()),
+                                builder: (context) => const rose_detail()),
                           );
                         },
                         icon: Icon(Icons.add_alert),
@@ -210,6 +215,28 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Center(
+              child: Row(
+                children: [
+                  if (category != null && category!.label == "Tulip") ...{
+                    SizedBox(
+                      width: 150,
+                    ),
+                    //  RaisedButton.icon(onPressed: (){_pageController.an}, icon: Icon(Icons.ac_unit_sharp), label: Text("MORE DETAIL"))
+                    ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const tulip_detail()),
+                          );
+                        },
+                        icon: Icon(Icons.add_alert),
+                        label: Text("detail"))
+                  }
+                ],
+              ),
+            ),
+            Center(
               child: Column(
                 children: [
                   if (category != null && category!.label == "Daisy") ...{
@@ -219,6 +246,28 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: Colors.greenAccent,
                           fontWeight: FontWeight.bold),
                     ),
+                  }
+                ],
+              ),
+            ),
+            Center(
+              child: Row(
+                children: [
+                  if (category != null && category!.label == "Daisy") ...{
+                    SizedBox(
+                      width: 150,
+                    ),
+                    //  RaisedButton.icon(onPressed: (){_pageController.an}, icon: Icon(Icons.ac_unit_sharp), label: Text("MORE DETAIL"))
+                    ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const daisy_detail()),
+                          );
+                        },
+                        icon: Icon(Icons.add_alert),
+                        label: Text("detail"))
                   }
                 ],
               ),
@@ -238,6 +287,28 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Center(
+              child: Row(
+                children: [
+                  if (category != null && category!.label == "Dandelion") ...{
+                    SizedBox(
+                      width: 150,
+                    ),
+                    //  RaisedButton.icon(onPressed: (){_pageController.an}, icon: Icon(Icons.ac_unit_sharp), label: Text("MORE DETAIL"))
+                    ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const dandelion_detail()),
+                          );
+                        },
+                        icon: Icon(Icons.add_alert),
+                        label: Text("detail"))
+                  }
+                ],
+              ),
+            ),
+            Center(
               child: Column(
                 children: [
                   if (category != null && category!.label == "Sunflower") ...{
@@ -246,6 +317,28 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: TextStyle(
                           color: Colors.redAccent, fontWeight: FontWeight.bold),
                     ),
+                  }
+                ],
+              ),
+            ),
+            Center(
+              child: Row(
+                children: [
+                  if (category != null && category!.label == "Sunflower") ...{
+                    SizedBox(
+                      width: 150,
+                    ),
+                    //  RaisedButton.icon(onPressed: (){_pageController.an}, icon: Icon(Icons.ac_unit_sharp), label: Text("MORE DETAIL"))
+                    ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const sunflower_detail()),
+                          );
+                        },
+                        icon: Icon(Icons.add_alert),
+                        label: Text("detail"))
                   }
                 ],
               ),

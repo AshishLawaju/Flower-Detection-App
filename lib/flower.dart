@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:imageclassification/11main.dart';
 import 'package:imageclassification/about.dart';
 import 'package:imageclassification/flist.dart';
+import 'package:imageclassification/health.dart';
 import 'package:imageclassification/listofflower.dart';
-
 
 //navbar page
 class flowerPage extends StatefulWidget {
@@ -18,6 +18,7 @@ class _flowerPageState extends State<flowerPage> {
   List<Widget> _screens = [
     MyHomePage(),
     GridB(),
+    Health(),
     aboutPage(),
   ];
   int _selectedIndex = 0;
@@ -42,6 +43,7 @@ class _flowerPageState extends State<flowerPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         //podCoder
+        type: BottomNavigationBarType.fixed,
         onTap: _onItemTapped,
         items: [
           BottomNavigationBarItem(
@@ -68,14 +70,27 @@ class _flowerPageState extends State<flowerPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.person,
+              Icons.health_and_safety,
               color: _selectedIndex == 2 ? Colors.orangeAccent : Colors.grey,
+            ),
+            title: Text(
+              'Health',
+              style: TextStyle(
+                  color:
+                      _selectedIndex == 2 ? Colors.orangeAccent : Colors.grey),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person,
+              color: _selectedIndex == 3 ? Colors.pink[400] : Colors.grey,
             ),
             title: Text(
               'About',
               style: TextStyle(
-                  color:
-                      _selectedIndex == 2 ? Colors.orangeAccent : Colors.grey),
+                  color: _selectedIndex == 3
+                      ? Colors.pinkAccent[500]
+                      : Colors.grey),
             ),
           ),
         ],

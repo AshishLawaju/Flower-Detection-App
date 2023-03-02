@@ -7,6 +7,7 @@ import 'package:imageclassification/classifier_quant.dart';
 import 'package:logger/logger.dart';
 import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
 
+//kam na lagay file
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {

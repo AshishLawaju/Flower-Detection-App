@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class rose_detail extends StatelessWidget {
-  const rose_detail({Key? key}) : super(key: key);
+class dandelion_detail extends StatelessWidget {
+  const dandelion_detail({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class rose_detail extends StatelessWidget {
                 height: 45,
               ),
               Text(
-                "Rose",
+                "Dandelion",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
               ),
@@ -25,18 +25,18 @@ class rose_detail extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                      width: 80,
+                      width: 21,
                     ),
                     Material(
                       elevation: 30,
                       borderRadius: BorderRadius.circular(20),
-                      shadowColor: Colors.green,
+                      shadowColor: Colors.greenAccent,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          "https://images.unsplash.com/photo-1571260118569-c77a06a97a8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+                          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/TaraxacumOfficinaleSeed.JPG/1280px-TaraxacumOfficinaleSeed.JPG",
                           height: 370,
-                          width: 250,
+                          width: 370,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -64,10 +64,10 @@ class rose_detail extends StatelessWidget {
               ),
               Container(
                 width: 380,
-                height: 80,
+                height: 195,
                 child: Material(
                   elevation: 30,
-                  shadowColor: Colors.blueGrey,
+                  shadowColor: Colors.grey,
                   borderRadius: BorderRadius.circular(30),
                   child: Row(
                     children: [
@@ -75,7 +75,7 @@ class rose_detail extends StatelessWidget {
                         width: 24,
                       ),
                       Text(
-                          "\nScientific name: Rosa \nHigher classification: Rosoideae\nRank: Genus\n "),
+                          "\nKingdom: Plantae \nClade: Tracheophytes\n Clade: Angiosperms\nClade: Eudicots\nClade: Asterids\nOrder: Asterales\nFamily:	Asteraceae\nSubfamily: Cichorioideae\nTribe: Cichorieae\nSubtribe: Crepidinae\nGenus: Taraxacum\n \n "),
                       SizedBox(),
                     ],
                   ),
@@ -86,7 +86,7 @@ class rose_detail extends StatelessWidget {
               ),
               Container(
                 width: 380,
-                height: 200,
+                height: 190,
                 child: Material(
                   elevation: 30,
                   shadowColor: Colors.purpleAccent,
@@ -96,7 +96,7 @@ class rose_detail extends StatelessWidget {
                       Container(
                         width: 350,
                         child: Text(
-                          "\nA rose is either a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and tens of thousands of cultivars\nRoses are erect, climbing, or trailing shrubs, the stems of which are usually copiously armed with prickles of various shapes and sizes, commonly called thorns. The leaves are alternate and pinnately compound i.e., feather-formed, usually with oval leaflets that are sharply toothed.",
+                          "\nTaraxacum  is a large genus of flowering plants in the family Asteraceae, which consists of species commonly known as dandelions. The scientific and hobby study of the genus is known as taraxacology.The genus is native to Eurasia and North America.\nIn general, the leaves are 50–250 millimetres (2–10 in) long or longer, simple, lobed-to-pinnatisect, and form a basal rosette above the central taproot. The flower heads are yellow to orange coloured, and are open in the daytime, but closed at night ",
                           textAlign: TextAlign.justify,
                         ),
                       ),
